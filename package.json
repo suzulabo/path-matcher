@@ -1,9 +1,20 @@
 {
   "name": "@suzulabo/path-matcher",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
   "engines": {
     "node": ">=16"
   },
-  "scripts": {},
+  "scripts": {
+    "clean": "rm -rf dist",
+    "test": "jest",
+    "lint": "eslint src && prettier --check src",
+    "build": "tsc -p tsconfig.build.json"
+  },
   "devDependencies": {
     "@types/jest": "^28.1.8",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
